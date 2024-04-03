@@ -1,0 +1,13 @@
+<a [routerLink]="['../']">Back</a>
+
+
+<div *ngIf = "loaded">
+    <h3>Album Details #{{album.id}}</h3>
+    <h4>{{album.title}}</h4>
+
+    <p>{{album.body}}</p>
+</div>
+
+<a routerLink="photos">Photo</a>
+
+<p *ngIf = "!loaded">Album detail page is loading...</p>
