@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { AlbumsComponent } from './albums/albums.component';
-import { AlbumDetailComponent } from './album-detail/album-detail.component';
-import { AlbumPhotosComponent } from './album-photos/album-photos.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { AlbumDetailComponent } from './components/album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './components/album-photos/album-photos.component';
 
 @Component({
   selector: 'app-root',

@@ -19,19 +19,7 @@ export class AlbumService {
         return this.client.get<Album>(`https://jsonplaceholder.typicode.com/albums/${id}`);
     }
 
-    deleteAlbum(id: number){
-        return this.client.delete(`https://jsonplaceholder.typicode.com/albums/${id}`);
-    }
-
-    createAlbum(newAlbum: Album): Observable <Album>{
-        return this.client.post<Album>('https://jsonplaceholder.typicode.com/albums', newAlbum);
-    }
-
     getPhoto(id: number) {
         return this.client.get<Photo[]>(`https://jsonplaceholder.typicode.com/albums/${id}/photos`);
-    }
-
-    updateAlbum(id: number, albumData: Album): Observable<Album> {
-        return this.client.put<Album>(`https://jsonplaceholder.typicode.com/albums/${id}`, albumData);
     }
 }

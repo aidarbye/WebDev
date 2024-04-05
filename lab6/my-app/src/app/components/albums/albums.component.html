@@ -1,0 +1,40 @@
+<div class="col-6">
+<fieldset class="p-4 m-4 border">
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" [(ngModel)]="newAlbum.title" placeholder="" value="" required="">
+        </div>
+        <div class="col-12 col-sm-6">
+            <label for="Description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="Description" [(ngModel)]="newAlbum.body" placeholder="" value="" required="">
+        </div>
+    </div>
+    <div class="pt-2 d-flex justify-content-end ">
+        <button class="btn btn-primary" (click) = "addAlbum()">Add to album</button>
+    </div>
+</fieldset>
+</div>
+
+<div class="row" *ngIf= "loaded; else loading">
+    <div class="card col-12 col-md-3 m-2 px-0" *ngFor = "let album of albums">
+        <div class="card-header">
+            <div class="card-title">
+                {{album.id}} {{album.title}}
+            </div>
+        </div>
+        <div class="card-body">
+        <p class="card-text">{{album.body}}</p>
+        <a [routerLink] = "['/albums', album.id]" class="btn btn-primary">View</a>
+        <button class="btn btn-danger ms-2" (click) = "deleteAlbum(album.id!)">
+            Delete
+        </button>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <p>
+        Albums are loading...
+    </p>
+</ng-template>

@@ -1,7 +1,7 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Photo } from '../models/photo';
-import { AlbumService } from '../services/album.service';
+import { Photo } from '../../models/photo';
+import { AlbumService } from '../../services/album.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
